@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.gap {
+    width: 100%;
+    height: 300px;
+}
+
+.patate {
+    background-color: yellowgreen;
+    width: 300px;
+    height: 300px;
+    margin: 25px;
+}
+
+.container:nth-child(1) {
+    display: flex;
+    align-items: center;
+    /*justify-content: center;*/
+    background-color: lightblue;
+}
+#red {
+    background-color: palevioletred;
+}
+#yellow {
+    background-color: palegoldenrod;
+}
+#blue {
+    background-color: paleturquoise;
+}
