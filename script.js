@@ -1,19 +1,59 @@
-// const size = 973;
-// let count = 0
-// let timeOut = true
-
 gsap.registerPlugin(ScrollTrigger);
-gsap.default({ease:"none",duration:2})
 
-gsap.to("#red")
+// const size = ;
+// console.log(size);
 
-tl.from("#yellow",{xPercent:1080})
+// gsap.to(".blue",{
+//     x:-500,
+//     duration: 8,
+//     scrollTrigger: {
+//         trigger: ".patate",
+//         start: "top center",
+//         end:"bottom center",
+//         scrub: 2,
+//         toggleActions: "restart none none none",
+//         pin: ".patate",
+//         pinSpacing: false,
+//         markers: {
+//             fontSize: "2rem",
+//         },
+//     }
+// })
 
-ScrollTrigger.create({
-    trigger: "#red",
-    start: "top top",
-    end : "+=300px",
-    // x:200,
-    pin:true
-    // markers:true,
+const weigt = document.getElementById("blue").offsetWidth
+const weigtpatate = document.getElementsByClassName("patate")[0].offsetWidth
+console.log(weigt)
+
+gsap.to(".patate",{
+    xPercent:((weigt / weigtpatate) * 100) - 100,
+    // duration: 1,
+    scrollTrigger: {
+        trigger: ".patate",
+        start: "30% center",
+        end:"80% center",
+        scrub: 2,
+        toggleActions: "restart none none none",
+        pin: ".patate2",
+        pinSpacing: true,
+        markers: {
+            fontSize: "2rem",
+        },
+    }
 })
+
+// gsap.to(".patate",{
+//     x:-500,
+//     duration: 8,
+//     scrollTrigger: {
+//         trigger: ".patate",
+//         start: "top center",
+//         end:"bottom center",
+//         scrub: 2,
+//         toggleActions: "restart none none none",
+//         pin: ".patate",
+//         pinSpacing: false,
+//         markers: {
+//             fontSize: "2rem",
+//         },
+//     }
+// })
