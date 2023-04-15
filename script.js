@@ -22,10 +22,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 const weigt = document.getElementById("blue").offsetWidth
 const weigtpatate = document.getElementsByClassName("patate")[0].offsetWidth
-console.log(weigt)
+// const weigtpatate = document.getElementById("panel").offsetWidth
+// const weigtpatate = 300
 
 gsap.to(".patate",{
-    xPercent:((weigt / weigtpatate) * 100) - 100,
+    x: -weigtpatate,
     // duration: 1,
     scrollTrigger: {
         trigger: ".patate",
@@ -34,7 +35,7 @@ gsap.to(".patate",{
         scrub: 2,
         toggleActions: "restart none none none",
         pin: ".patate2",
-        pinSpacing: true,
+        pinSpacing: false,
         markers: {
             fontSize: "2rem",
         },
